@@ -75,9 +75,24 @@ else
 fi
 
 # download Holbert
-aws s3 cp s3://cliniciannotes-ds/package/ ./package/ --recursive --profile main-DS
-pip3 install package/holbert-0.0.1-py3-none-any.whl
+aws s3 cp s3://cliniciannotes-ds/package/ ./HolbertPackage/ --recursive --profile main-DS
+pip3 install HolbertPackage/holbert-0.0.1-py3-none-any.whl
 
+
+# Download all models from S3 (specified in download.txt)
+# Note: The second column specifies the path to which the model will be saved. 
+
+# Models include:
+# 1) BioDischargeSummaryBERT model: config/pretrained/biobert_pretrain_output_disch_100000
+# 2) Sentence topic classifier: results/sentenceClassifier_V2/20210713_153829_20210713_202132/model0
+# 3) MSE IE model: results/MseAllTokens/20210804_030119/20210804_030119/model2
+# 4) Stressor IE model: results/StressorsAllTokens/20210909_161211/20210911_171841/model0
+
+input='download.txt'
+while IFS= read -r line; 
+  do 
+  aws s3 sync ${line}; 
+done < "$input"
 
 
 deactivate
