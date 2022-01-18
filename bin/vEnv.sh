@@ -11,7 +11,7 @@
 # if you wish to use this environment in 
 # AWS
 #----------------------------------------------
-python3 -m venv env
+python3.8 -m venv env
 
 # this is for bash. Activate
 # it differently for different shells
@@ -62,6 +62,9 @@ else
     # Neuroblu python package
     pip3 install -e git+ssh://git@github.com/Holmusk/neuroblu_postgres.git@v0.7.0#egg=neuroblu_postgres
 
+    # Sbert
+    pip3 install sentence-transformers
+
     pip3 freeze > requirements.txt
 
     # Generate the documentation
@@ -70,5 +73,11 @@ else
     cd ..
 
 fi
+
+# download Holbert
+aws s3 cp s3://cliniciannotes-ds/package/ ./package/ --recursive --profile main-DS
+pip3 install package/holbert-0.0.1-py3-none-any.whl
+
+
 
 deactivate

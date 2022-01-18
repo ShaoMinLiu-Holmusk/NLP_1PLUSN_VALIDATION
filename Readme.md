@@ -25,7 +25,18 @@ Model:
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-* clone the repo `
+Clone the repo using the following command, make sure:
+* you have Python3.8 installed
+* you are on dev branch for development
+* you have AWS CLI installed 
+* has access to s3://cliniciannotes-ds/package/
+* set up main-DS profile
+
+```
+git@github.com:ShaoMinLiu-Holmusk/NLP_1PLUSN_VALIDATION.git  
+make firstRun
+```   
+
 
 ## Prerequisites
 
