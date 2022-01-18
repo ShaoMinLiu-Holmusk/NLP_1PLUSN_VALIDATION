@@ -1,0 +1,38 @@
+axes.titlecolor     : 335C98
+axes.titlesize      : 16
+axes.titleweight    : bold
+axes.titlepad       : 11
+axes.titlelocation  : left 
+axes.linewidth      : 1
+axes.edgecolor      : EAEEF3  
+axes.grid           : True 
+axes.labelcolor     : 656566
+axes.spines.top     : False
+axes.spines.right   : False
+axes.labelsize      : 14
+axes.labelweight    : 500
+axes.labelpad       : 6
+axes.prop_cycle     : cycler('color', ['4588EC', 'ff7f0e', '2ca02c', 'd62728', '9467bd', '8c564b', 'e377c2', '7f7f7f', 'bcbd22', '17becf'])
+axes.axisbelow      : True 
+axes.xmargin        : .05
+axes.ymargin        : .05
+axes.zmargin        : 0
+
+xtick.color         : 656566
+ytick.color         : 656566
+xtick.major.size    : 12
+ytick.major.size    : 12
+xtick.labelsize     : 12
+ytick.labelsize     : 12
+lines.color         : 4588EC
+text.color          : 656566
+
+grid.color          : EAEEF3
+grid.linewidth      : 1
+
+font.family         : Nimbus Sans
+font.sans-serif     : Nimbus Sans L
+font.style          : normal
+font.weight         : 500
+figure.autolayout   : True
+savefig.dpi         : 300

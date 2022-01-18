@@ -1,0 +1,7 @@
+{
+    "drug1": "trazodone",
+    "drug2": "fluoxetine",
+    "min_CGI": 3, 
+    "study_period": 45,
+    "win_days": 7
+}
