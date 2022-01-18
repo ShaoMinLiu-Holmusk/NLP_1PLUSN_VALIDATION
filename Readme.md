@@ -1,10 +1,31 @@
 # NLP_1PLUSN_VALIDATION
 
-One Paragraph of project description goes here
+This project is meant to be a validation of the 1PLUSN concept. In short, in order to make the models adaptive to changes in labels. A multi-label classification problem can be treated as multiple single-label prediction problem.  
+
+This project will use the annotated shAlp as gound truth. (For example, identify text that are related to `suicidal thoughts`, create a train/test set from here).
+Holbert will be used to predict the target, which will form the baseline.   
+
+In addtional, other features can be extracted/transformed to generate richer features that aims at beating the baseline. This project is to produce a possibly better set of feature that is suitable for a variety of tasks. Thus, the features should be as model-agnostic as possible. Hence the same problem might be tackled using different models and different feature candidates.  
+
+Feature Candidates:  
+* Holbert
+* Sbert
+* Holbert + Sbert
+* others
+
+Problems:
+* Suicidal Thought Prediction
+
+Model:
+* Random Forest
+* Neural Network
+
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+* clone the repo `
 
 ## Prerequisites
 

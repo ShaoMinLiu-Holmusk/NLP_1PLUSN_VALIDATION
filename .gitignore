@@ -21,6 +21,7 @@ env/
 **/._*
 **/.ipynb_checkpoints
 .vscode
+*.code-workspace
 
 # Dont save passwords, server locations etc.
 config/db.json
