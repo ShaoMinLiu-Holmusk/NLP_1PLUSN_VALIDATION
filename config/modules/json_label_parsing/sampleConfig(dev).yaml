@@ -1,0 +1,20 @@
+# trying out using YAML as config file
+# YAML supports commenting unlike JSON
+# it is more user-friendly for documentation purposes
+# other than this, yamlFile and JSON can both be read as
+# a dictionary format, thus little changes are needed 
+# to be made to the actual code
+
+dataSource    : ../data/raw/MSE
+allowedUsers  : all # accepts all or a list of usernames
+# allowedUsers: [aaron, ben, candy, daniel, jesisca, qian, aescamil]
+
+output:
+  location    : ../data/intermediate/parsedJsonMSE
+  name        : default # easier to just keep to deafult
+  overwrite   : false # if overwrite is false, will write with incremental name
+  
+  
+report:
+  activate    : true
+  rerunParsing: false

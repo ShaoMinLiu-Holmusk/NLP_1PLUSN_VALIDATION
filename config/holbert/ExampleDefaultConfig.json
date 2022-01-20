@@ -1,0 +1,29 @@
+{
+    "SupportedModel": {
+        "SentenceClassifier": true,
+        "MseClassifier": true,
+        "StressorsClassifier": true,
+        "SideEffectClassifier": false
+    },
+    "BertPath": "../models/biobert_pretrain_output_disch_100000",
+    "SentenceClassifier": {
+        "path": "../models/sentenceClassifier_V2/20210713_153829/20210713_202132/model0",
+        "filterSubLevel": true,
+        "topicLabMaptoClassifer": {
+            "MseClassifier":        0,
+            "StressorsClassifier":  1
+        }
+    },
+    "MseClassifier": {
+        "path": "../models/MseAllTokens/20210804_030119/20210804_030119/model2",
+        "filterSubLevel": true
+    },
+    "StressorsClassifier": {
+        "path": "../models/StressorsAllTokens/20210909_161211/20210911_171841/model0",
+        "filterSubLevel": true
+    },
+    "SideEffectClassifier": {
+    },
+    "Device": "auto",
+    "KeepTokens": true
+}

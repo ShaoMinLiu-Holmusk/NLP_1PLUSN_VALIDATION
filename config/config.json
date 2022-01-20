@@ -23,5 +23,8 @@
             }
 
         }
+    },
+    "configVersions":{
+        "json_label_parsing"     : "../config/modules/json_label_parsing/sampleConfig(dev).yaml"
     }
 }

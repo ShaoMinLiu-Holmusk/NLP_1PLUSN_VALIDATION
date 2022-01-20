@@ -1,4 +1,4 @@
-s3://cliniciannotes-ds/config/pretrained/biobert_pretrain_output_disch_100000   .config/modules/holbert/models/biobert_pretrain_output_disch_100000 --recursive --profile main-DS
-s3://cliniciannotes-ds/results/sentenceClassifier_V2/20210713_153829/20210713_202132/model0    .config/modules/holbert/models/sentenceClassifier_V2/20210713_153829/20210713_202132/model0 --recursive --profile main-DS
-s3://cliniciannotes-ds/results/MseAllTokens/20210804_030119/20210804_030119/model2  .config/modules/holbert/models/MseAllTokens/20210804_030119/20210804_030119/model2 --recursive --profile main-DS
-s3://cliniciannotes-ds/results/StressorsAllTokens/20210909_161211/20210911_171841/model0    .config/modules/holbert/models/StressorsAllTokens/20210909_161211/20210911_171841/model0 --recursive --profile main-DS
+s3://cliniciannotes-ds/config/pretrained/biobert_pretrain_output_disch_100000   models/biobert_pretrain_output_disch_100000 --profile main-DS
+s3://cliniciannotes-ds/results/sentenceClassifier_V2/20210713_153829/20210713_202132/model0    models/sentenceClassifier_V2/20210713_153829/20210713_202132/model0 --profile main-DS
+s3://cliniciannotes-ds/results/MseAllTokens/20210804_030119/20210804_030119/model2  models/MseAllTokens/20210804_030119/20210804_030119/model2 --profile main-DS
+s3://cliniciannotes-ds/results/StressorsAllTokens/20210909_161211/20210911_171841/model0    models/StressorsAllTokens/20210909_161211/20210911_171841/model0 --profile main-DS

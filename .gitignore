@@ -33,3 +33,5 @@ src/logs/*.log
 # Dont save results or data (might be a lot of stuff)
 results/*
 data/*
+models/*
+HolbertPackage/*
