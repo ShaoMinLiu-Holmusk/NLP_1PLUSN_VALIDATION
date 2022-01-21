@@ -61,7 +61,7 @@ def outputPathName(logger,
     writeFolderPath = Path(outputLocation)
     writeFolderPath.mkdir(exist_ok=True, parents=True)
     writeName = outputName
-    suffix = '.csv' # correct suffix for the file
+    suffix = '.json' # correct suffix for the file
     if writeName == 'default':
         if allowedUsers == 'all':
             nameSuffix = '_all'

@@ -1,15 +1,30 @@
-[   
+[
     {
-        "moduleName" : "json_label_parsing",
-        "path"       : "modules/json_label_parsing/main.py",
-        "execute"    : true,
+        "moduleName": "json_label_parsing",
+        "path": "modules/json_label_parsing/main.py",
+        "execute": false,
         "description": "Process the json files produced from bokeh label application.",
-        "owner"      : "lIU SHAOMIN"
-    },{
-        "moduleName" : "Sample - Cohort Selection",
-        "path"       : "modules/sample/cohort_selection/cohort_selection.py",
-        "execute"    : false,
+        "owner": "lIU SHAOMIN"
+    },
+    {
+        "moduleName": "create_dataset",
+        "path": "modules/create_dataset/main.py",
+        "execute": false,
+        "description": "Process the json files produced from json_label_parsing",
+        "owner": "lIU SHAOMIN"
+    },
+    {
+        "moduleName": "Sample - Cohort Selection",
+        "path": "modules/sample/cohort_selection/cohort_selection.py",
+        "execute": false,
         "description": "sample module to showcase cohort selection: ",
-        "owner"      : ""
+        "owner": ""
+    },
+    {
+        "moduleName": "feature_competition",
+        "path": "modules/feature_competition/main.py",
+        "execute": false,
+        "description": "",
+        "owner": ""
     }
 ]

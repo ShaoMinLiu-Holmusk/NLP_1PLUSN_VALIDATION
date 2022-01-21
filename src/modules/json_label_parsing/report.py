@@ -19,8 +19,15 @@ def report(logger, writeDirectory:PosixPath)->dict:
     print('reading document')
     labelFile = readYASON(writeDirectory)
     
+    
     docCount = documentCount(labelFile)
-    labelCounter, MSETopicCounter, subTopicCount, negationCount,historicalCount = analyseLabels(labelFile)
+    labelCounter, \
+    MSETopicCounter, \
+    subTopicCount, \
+    subTopicTypeCount, \
+    negationCount, \
+    historicalCount \
+    = analyseLabels(labelFile)
     
     report = {
         'documentCount': docCount,
@@ -31,6 +38,7 @@ def report(logger, writeDirectory:PosixPath)->dict:
         'MSEtopics':{
             'topicCount': len(MSETopicCounter),
             'tally': MSETopicCounter,
+            'subTopicTypeCount': subTopicTypeCount,
             'subTopics': subTopicCount
         },
         'negationCount': negationCount,
@@ -53,7 +61,8 @@ def analyseLabels(logger, labelFile:list)->int:
     
     for document in tqdm(labelFile, 
                          desc='Analysis', 
-                         total=len(labelFile)):
+                         total=len(labelFile),
+                         disable=True):
         for eachLabel in document['labels']:
             # MSEtype - subLabel, negation, historical, assertion, annotationSubtype,
             
@@ -79,10 +88,17 @@ def analyseLabels(logger, labelFile:list)->int:
     labelCounter = OrderedDict(sorted(labelCounter.items()))
     MSETopicCounter = OrderedDict(sorted(MSETopicCounter.items()))
     subTopicCount = OrderedDict(sorted(subTopicCount.items()))
+    subTopicTypeCount = dict((topic, len(valueDict)) for topic, valueDict in subTopicCount.items())
     for key,valueDict in subTopicCount.items():
         valueDict = OrderedDict(sorted(valueDict.items()))
+        subTopicCount[key] = valueDict
     negationCount = OrderedDict(sorted(negationCount.items()))
     historicalCount = OrderedDict(sorted(historicalCount.items()))
     
-    return labelCounter, MSETopicCounter, subTopicCount, negationCount, historicalCount
+    return labelCounter, \
+        MSETopicCounter, \
+        subTopicCount, \
+        subTopicTypeCount,\
+        negationCount, \
+        historicalCount
             

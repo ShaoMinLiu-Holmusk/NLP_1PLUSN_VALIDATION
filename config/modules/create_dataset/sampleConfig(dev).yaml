@@ -1,0 +1,49 @@
+# trying out using YAML as config file
+# YAML supports commenting unlike JSON
+# it is more user-friendly for documentation purposes
+# other than this, yamlFile and JSON can both be read as
+# a dictionary format, thus little changes are needed 
+# to be made to the actual code
+
+dataSource      : ../data/intermediate/parsedJsonMSE/MSE_all.json
+
+convertTask     : [
+  {
+    customLabel : suicidalProne,
+    positive    : [
+                    'Suicidality - attempt',                            # 267 cases
+                    'Suicidality - ideation present',                   # 493 cases
+                    'Suicidality - ideation present with intent',       # 54 cases
+                    'Suicidality - ideation present with means',        # 15 cases
+                    'Suicidality - ideation present with plan'          # 91 cases
+                  ]
+  },{
+    customLabel : anhedoniaPresent,
+    positive    : [
+                    'Mood - Anhedonia',                                 # 35 cases
+                    'Mood - anhedonia/loss of interest/ enjoyment'      # 119 cases
+                  ]
+  },{
+    customLabel : cognitionIssue,
+    positive    : 'general issue'                                       # 160 cases
+  },{
+    customLabel : hallucinationPresent,
+    positive    : [
+                    'Hallucinations - auditory',                        # 450 cases
+                    'Hallucinations - command',                         # 81 cases
+                    'Hallucinations - gustatory',                       # 8 cases
+                    'Hallucinations - illusion',                        # 18 cases
+                    'Hallucinations - nonspecific issue',               # 81 cases
+                    'Hallucinations - olfactory',                       # 7 cases, not sure what this is, pending review
+                    'Hallucinations - responding to internal stimuli',  # 44 cases
+                    'Hallucinations - tactile',                         # 89 cases
+                    'Hallucinations - visual'                           # 386 cases
+    ]
+  }
+]
+
+
+output:
+  location    : ../data/intermediate/create_dataset
+  name        : '' # give a tag to this run, appended to runID, default to empty
+  

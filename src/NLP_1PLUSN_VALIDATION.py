@@ -1,4 +1,4 @@
-import jsonref, argparse
+import jsonref, argparse, traceback
 
 from importlib      import util
 from logs           import logDecorator  as lD
@@ -74,6 +74,7 @@ def importModules(logger, resultsDict):
             module.main(resultsDict)
         except Exception as e:
             print('Unable to load module: {}->{}\n{}'.format(name, path, str(e)))
+            traceback.print_exc()
 
     return
 

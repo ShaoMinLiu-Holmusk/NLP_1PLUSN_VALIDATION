@@ -1,0 +1,15 @@
+
+# trying out using YAML as config file
+# YAML supports commenting unlike JSON
+# it is more user-friendly for documentation purposes
+# other than this, yamlFile and JSON can both be read as
+# a dictionary format, thus little changes are needed 
+# to be made to the actual code
+
+dataSource    : ../data/
+
+output:
+  location    : ../data/intermediate/feature_competition
+  name        : default # easier to just keep to deafult
+  overwrite   : false # if overwrite is false, will write with incremental name
+    

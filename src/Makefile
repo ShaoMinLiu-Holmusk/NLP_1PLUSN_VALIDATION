@@ -7,6 +7,9 @@ run:
 runA:
 	../bin/run.sh -a
 
+newModule:
+	python3 ../bin/newModule.py --moduleName $(moduleName)
+
 # This is a quick check for timming.
 # For thorough results, use the profile
 # option

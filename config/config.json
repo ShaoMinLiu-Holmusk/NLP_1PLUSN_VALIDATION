@@ -1,30 +1,27 @@
 {
-    "logging":{
-        
-        "logBase" : "NLP_1PLUSN_VALIDATION",
-        "level"   : "INFO",
-        "specs"   : {
-
-            "file":{
-                "todo"     : true,
-                "logFolder": "logs" 
+    "logging": {
+        "logBase": "NLP_1PLUSN_VALIDATION",
+        "level": "INFO",
+        "specs": {
+            "file": {
+                "todo": true,
+                "logFolder": "logs"
             },
-
-            "stdout":{
-                "todo"     : false 
+            "stdout": {
+                "todo": false
             },
-
-            "logstash":{
-                "todo"     : false,
-                "version"  : 1,
-                "port"     : 5959,
-                "host"     : "localhost",
-                "tags"     : []
+            "logstash": {
+                "todo": false,
+                "version": 1,
+                "port": 5959,
+                "host": "localhost",
+                "tags": []
             }
-
         }
     },
-    "configVersions":{
-        "json_label_parsing"     : "../config/modules/json_label_parsing/sampleConfig(dev).yaml"
+    "configVersions": {
+        "json_label_parsing": "../config/modules/json_label_parsing/sampleConfig(dev).yaml",
+        "create_dataset": "../config/modules/create_dataset/sampleConfig(dev).yaml",
+        "feature_competition": "../config/modules/feature_competition/sampleConfig(dev).yaml"
     }
 }

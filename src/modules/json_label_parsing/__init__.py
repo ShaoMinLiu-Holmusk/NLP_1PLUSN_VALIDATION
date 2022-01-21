@@ -3,7 +3,11 @@
 
 Each label for the sentence is assumed to have the following 
 structure:
-[label], negation, historical, assertion, annotationSubtype
+[label], negation, historical, assertion, annotationSubtype    
+    # apparently there is a mistake in the raw data
+    # not all in consistent format of `Type - sublabel`
+    # some have no hypen
+    # some have missing spaces infront or after the hypen
 
 For now, its likely that assertion and annotationSubtype does not 
 contain useful information, if we were to extract even just 
