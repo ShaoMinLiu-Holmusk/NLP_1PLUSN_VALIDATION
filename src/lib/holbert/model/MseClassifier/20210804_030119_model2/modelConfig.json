@@ -1,0 +1,167 @@
+{
+    "Path": {
+        "train_df": "../data/intermediate/training/uiBatch1/mseLab_tensor_20210804_stratifier.p",
+        "labels_df": "../config/modules/labels.json",
+        "clinicalBERT": "../config/pretrained/biobert_pretrain_output_disch_100000/",
+        "bert_config": "bert_config.json",
+        "pretrain_weights": "pytorch_model.bin",
+        "vocab": "vocab.txt"
+    },
+    "DataLoader": {
+        "tag2id": {
+            "B-sideeffect": 2,
+            "I-sideeffect": 1,
+            "O": 0
+        },
+        "id2tag": {
+            "2": "B-sideeffect",
+            "1": "I-sideeffect",
+            "0": "O"
+        },
+        "num_workers": 0,
+        "inputCol": "BioClinicalBERT_AllTokens",
+        "stratify": "stratifier",
+        "filterRows": "mseLab_mask",
+        "is_split_into_words": true,
+        "input_token_level": true,
+        "attention_mask": "attention_mask"
+    },
+    "TrainingParams": {
+        "bertVersion": 2,
+        "tokenizer": "emilyalsentzer/Bio_ClinicalBERT",
+        "k_fold": 3,
+        "train_test_flag": false,
+        "train_batch_size": 128,
+        "eval_batch_size": 128,
+        "test_batch_size": 128,
+        "max_seq_len": 64,
+        "num_epochs": 30,
+        "optimizer": "Adam",
+        "learning_rate": 0.00340271282566975,
+        "learning_rate_stepSize": 5,
+        "learning_rate_decay": 0.8,
+        "cache_per_n_epoch": 10,
+        "weight_decay": 0.004195745522016832,
+        "pos_scale": 1
+    },
+    "ModelTrain": {
+        "MLM": false,
+        "BERT": false,
+        "SentenceClassifier": false,
+        "MseClassifier": true,
+        "StressorsClassifier": false,
+        "SideEffectClassifier": false,
+        "OutcomeClassifier": false
+    },
+    "BERT": {
+        "bert.embeddings": false,
+        "bert.encoder.layer.0": false,
+        "bert.encoder.layer.1": false,
+        "bert.encoder.layer.2": false,
+        "bert.encoder.layer.3": false,
+        "bert.encoder.layer.4": false,
+        "bert.encoder.layer.5": false,
+        "bert.encoder.layer.6": false,
+        "bert.encoder.layer.7": false,
+        "bert.encoder.layer.8": false,
+        "bert.encoder.layer.9": false,
+        "bert.encoder.layer.10": false,
+        "bert.encoder.layer.11": false,
+        "bert.pooler": false
+    },
+    "MLM": {
+        "trainingParams": {
+            "token_level": true,
+            "training_mask_prob": 0.8
+        },
+        "inputCol": "tokens_mlm",
+        "modelOutput": [
+            "mlmLab"
+        ],
+        "stratify": "length_cat",
+        "input_ids": "input_ids",
+        "attention_mask": "attention_mask",
+        "offset_mapping": "offset_mapping"
+    },
+    "MseClassifier": {
+        "modelArchitecture": {
+            "mseLab": {
+                "num_layers": 2,
+                "hidden_size": [
+                    34
+                ],
+                "activation": "ReLu",
+                "output_activation": "Sigmoid",
+                "dropout_prob": 0.0,
+                "n_labels": 86
+            },
+            "mseC_negation": {
+                "num_layers": 2,
+                "hidden_size": [
+                    17
+                ],
+                "activation": "Tanh",
+                "output_activation": "Sigmoid",
+                "dropout_prob": 0.15,
+                "n_labels": 86
+            },
+            "mseLab_attNN": {
+                "num_layers": 2,
+                "hidden_size": [
+                    18
+                ],
+                "activation": "Sigmoid",
+                "output_activation": "Sigmoid",
+                "dropout_prob": 0.4
+            },
+            "mseC_negation_attNN": {
+                "num_layers": 2,
+                "hidden_size": [
+                    19
+                ],
+                "activation": "ReLu",
+                "output_activation": "Sigmoid",
+                "dropout_prob": 0.2
+            }
+        },
+        "trainingType": {
+            "BERT": {
+                "freeze_weights": true,
+                "use_embedding": true
+            }
+        },
+        "trainingParams": {
+            "output_token_level": true,
+            "training_mask_prob": 0.2,
+            "negation_mask": true,
+            "l2": 0.0001,
+            "early_stopping": 15,
+            "optimizer": "Adam",
+            "sample_weights": true,
+            "pos_scale": 12,
+            "pos_scwt": {
+                "1": 1,
+                "2": 1,
+                "3": 1,
+                "4": 1,
+                "5": 1,
+                "6": 1
+            },
+            "scale_dict": "None",
+            "modelOutput_weights": {
+                "mseLab": 1,
+                "mseC_negation": 0.55
+            },
+            "validation": true,
+            "classifierWeight": 1
+        },
+        "modelOutput": [
+            "mseLab",
+            "mseC_negation"
+        ],
+        "labelKeys": {
+            "mseLab": "mseLabRevisedNegation20210804",
+            "mseC_negation": "mseC_negation"
+        }
+    }
+}

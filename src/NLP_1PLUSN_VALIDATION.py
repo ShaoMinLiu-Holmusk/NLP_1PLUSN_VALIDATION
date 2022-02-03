@@ -33,7 +33,6 @@ def importModules(logger, resultsDict):
         for m in resultsDict['modules']:
             toAdd = [n for n in modules if n['moduleName'] == m][0]
             tempModules.append( toAdd )
-
         modules = tempModules
 
     for m in modules:
@@ -61,12 +60,13 @@ def importModules(logger, resultsDict):
             except Exception as e:
                 logger.error(f'Unable to determine whether this module should be skipped: {e}.\n Module is being skipped.')
                 continue
-
+        
                 
         try:
             name, path = m['moduleName'], m['path']
+            
             logger.info('Module {} is being executed'.format( name ))
-
+            
             module_spec = util.spec_from_file_location(
                 name, path)
             module = util.module_from_spec(module_spec)
@@ -147,8 +147,9 @@ if __name__ == '__main__':
         logLevel = resultsDict['config']['logging']['level']
     except Exception as e:
         print('Logging level taking from the config file: {}'.format(logLevel))
+        
 
     logInit  = lD.logInit(logBase, logLevel, logSpecs)
     main     = logInit(main)
-
+    
     main(resultsDict)

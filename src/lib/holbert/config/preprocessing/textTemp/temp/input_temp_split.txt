@@ -1,0 +1,251 @@
+﻿HISTORY AND PHYSICAL
+
+
+Patient Name: [Person Name]
+
+MRN: [Id]
+
+Billing No: [Id]
+
+Admit Date: [Date]
+
+Discharge Date: [Date]
+
+Service Date: [Date]
+
+ESA Attending Dr:
+
+[Hospital Name] Attending: [Id]
+
+Report Status:
+
+CC:
+
+Extra Copies:
+
+
+<MDMsgStart:>
+
+<MDMsgEnd:>
+
+
+
+<EndOfHeader>
+
+
+REASON FOR HOSPITALIZATION
+
+[Person Name] is a [Age]-year-old single Caucasian male, who was admitted on an involuntary 9.39 legal status.
+The patient had allegedly made threatening statements regarding burning down the house and threatening to kidnap a child.
+This was his first admission to [Hospital Name] Adult Mental Health Unit.
+
+CHIEF COMPLAINT
+
+“My girlfriend and son left me [Location] at the casino.
+”
+
+
+HISTORY OF PRESENT ILLNESS
+
+This patient was brought in on a pickup order from [Location] to the emergency room.
+He has been living with his girlfriend in [Location] and this past week his [Age] son also moved in.
+The patient states that his son is on SSI and has chemical dependency and bipolar disorder, having him in the house over the last week has caused an increased amount of stress for him and his girlfriend.
+It sounds as though the relationships are very chaotic and conflictual.
+The patient reports yesterday they have gone to the casino.
+The girlfriend and son apparently left the casino without telling him and left him stranded.
+The patient had to hitchhike.
+During this time, the girlfriend had alleged that he had sent text messages to her that were threatening.
+Apparently, they alleged that the patient had threatened to burn down the girlfriend’s daughter’s house and also had threatened to kidnap the patient’s grandson.
+The police therefore found the patient and picked him for further evaluation.
+In the emergency room, the patient was evaluated by crisis who felt that he may not be a reliable historian and also because he had had a previous history of inpatient psychiatric hospitalization may have some underlying issues that need to be evaluated for.
+He also appeared very upset with having been brought to the hospital.
+
+The patient today is cooperative and pleasant with the evaluation.
+He reports he has numerous stressors occurring in his life.
+He has been depressed since his father died a year ago who he was very close to.
+The patient reports having depression since then.
+He also reports issues with anger and has been verbally aggressive.
+He has had problems with being irritable.
+The patient says he does notice at times his mood is labile.
+In addition to being depressed, he does not endorse any clear manic episodes.
+He does however indicate that he has had a decreased need for sleep and also has had problems with insomnia getting only about one to two hours at night.
+He claims that his energy level despite this is good.
+He has good appetite.
+He states that he has some difficulties with concentration.
+It appears as though he also has significant anxiety symptoms.
+He claims to be always feeling restless, has difficulty with his mind racing and distracted.
+He has frequent gastrointestinal complaints and headaches and muscle tension.
+He says that he worries “about everything.
+” He adamantly denies having any suicidal ideation or thoughts of self harm.
+Especially with his living situation and his relationship with his girlfriend as well as his son, he has not been compliant in seeing his primary care physician for followup and has also not seeing his therapist in some time.
+He indicates that his family has been fighting about the father’s estate since his death.
+
+PAST PSYCHIATRIC HISTORY
+
+The patient was admitted to the [Hospital Name] in [Date] and diagnosed with major depression.
+He was treated at that time with Prozac and trazodone.
+Per the patient, his girlfriend did not think the Prozac was helping him and possibly was making him feel worse.
+He discontinued that medication.
+He has been on Neurontin for mood stabilization and anxiety, which he does not feel has been effective.
+He denies history of suicide attempts or self injurious behavior.
+He had been referred to [Location], a therapist at [Location], but he only saw her few times.
+He sees his primary care physician, Dr. [Person Name] in [Location] for medications, but also has been noncompliant with those appointments.
+He does not believe he has been on any other psychotropic medications.
+
+PAST MEDICAL HISTORY
+
+The patient states he has diabetes.
+He also has history of a TBI when he was in a fight with his younger son few years ago.
+He reports he has several bulging disks and has chronic pain.
+The patient also found out in [Date] that he had an abnormal chest x-ray and CT, which showed nodules in his lung, which he has still not had followup for.
+He denies history of seizures, no surgeries otherwise.
+
+CURRENT MEDICATIONS
+
+1.__Neurontin 600 mg every a.m., 300 mg q.h.s.
+2.__Metformin 1000 mg b.i.d.
+3.__Naproxen 500 mg b.i.d.
+
+ALLERGIES
+
+No known drug allergies.
+
+FAMILY HISTORY
+
+The patient states that his son has chemical dependency and bipolar disorder.
+His daughter has chemical dependency issues and going into rehab.
+
+SUBSTANCE ABUSE HISTORY
+
+The patient reports smoking one to two-pack of cigarettes a day.
+He denies alcohol or illicit street drug use currently.
+States that he had used cannabis starting in his teenage years and has been clean for 13 years.
+He did not have chemical dependency treatment, cold turkey.
+
+SOCIAL HISTORY
+
+The patient denies history of abuse.
+He states his childhood was very chaotic and stressful due to the fact that his parents divorced when he was age [Age].
+The patient moved back and forth with both parents.
+The patient dropped out of school in the eighth grade to start working.
+He has been self employed for construction.
+He currently lives in an apartment with his girlfriend, [Person Name], who he has been with for the last year.
+He says she also has problems with depression and suicidal ideation.
+The patient also had his [Age]-year-old recently moved in with him because he was not getting along with the patient’s ex-wife who is his mother.
+He states that his daughter is going into rehab and they are worried about their grandson.
+He has a [Age]-year-old son, is handicapped.
+He denies history of legal altercations, was raised on a dairy form and has been grieving the death of his father who died a year ago who the patient was very close to.
+He has inconsistent contact with his mother.
+
+LABORATORY DATA
+
+complete blood count within normal limits.
+Chem profile revealed glucose at 343.
+Urine drug screen negative.
+Urinalysis revealed 40 ketones and glucose.
+
+REVIEW OF SYSTEMS
+
+A 14-point review of systems was completed and positive for bulging disk, diabetes, lung nodules, headaches, gastrointestinal upset, muscle tension, weight gain, otherwise negative.
+
+PHYSICAL EXAMINATION
+
+VITAL SIGNS: Temp 96.6, blood pressure 105/76, pulse 73, respirations 15.
+SKIN: Clean, dry.
+HEENT: Normocephalic, atraumatic.
+EYES: Pupils equal, round, and reactive to light.
+Extraocular muscles intact.
+NECK: Supple, nontender.
+LUNGS:
+Clear to auscultation bilaterally
+
+, no wheezes, rales, or rhonchi.
+CARDIAC: Regular rate and rhythm, no murmurs.
+ABDOMEN: Positive bowel sounds in all four quadrants, soft, nontender.
+No rebound or guarding.
+EXTREMITIES: No clubbing, cyanosis, or edema.
+Full range of motion.
+NEUROLOGIC: CN II to XII grossly intact.
+Cerebellar intact.
+Normal tandem gait.
+Strength intact.
+Reflexes equal bilaterally.
+
+MENTAL STATUS EXAM
+
+The patient was pleasant and cooperative for the interview.
+He was dressed in hospital scrubs.
+He was alert and oriented in all spheres.
+The patient appeared anxious and restless.
+He became very tearful and emotional when taking about his father.
+The patient’s thoughts were logical and goal-directed.
+There was no evidence of any delusional thinking.
+No paranoia.
+His mood depressed.
+His affect was blunted.
+At times, he appeared superficial and seemed to minimize his issues.
+He denies suicidal or homicidal ideation.
+Denies any intent to burn down a house or to kidnap his grandson.
+The patient’s intelligence average, language intact.
+He denies hallucinations.
+He does not appear to be intermittently attentive.
+The patient’s impulse control has been poor.
+He has struggles with concentration and appears easily distracted.
+Judgment poor prior to hospitalization.
+His insight is limited.
+
+ASSESSMENT
+
+This is a [Age]-year-old male with previous history of major depression who was admitted after his girlfriend alleged that he had threatened to burn down her house and to kidnap a child.
+The patient was brought in on a police pickup.
+He appears to be exhibiting symptoms of depression, mood lability, and generalized anxiety.
+There is significant conflict occurring in his family and several psychosocial stressors that are contributing to his current mental state.
+At this time, he is denying any thoughts of harm to himself or others, but does appear to be anxious and depressed.
+Due to the patient’s threats made in the emergency room and his previous history of depression and previous history of suicidal ideation when he was admitted to the [Hospital Name], recommend that he be evaluated further and have close observation in a 24-hour professional psychiatric hospitalization setting to ensure safety and stabilization of his mood and behavior.
+
+DIAGNOSES
+
+AXIS I: Mood disorder, not otherwise specified; history of major depressive disorder, rule out possible bipolar II disorder.
+Generalized anxiety disorder.
+Rule out impulse control disorder, not otherwise specified.
+AXIS II: Deferred.
+AXIS III:
+
+Diabetes, history of TBI, bulging disk, lung nodules.
+AXIS intravenous: Issues with primary support, financial difficulties, grieving over death of father, conflict with siblings.
+AXIS V: GAF of 35.
+
+PLAN
+
+1.__Admit to adult mental health on a 939 legal status.
+2.__He will receive individual and group therapy.
+3.__We will schedule a family meeting as indicated.
+We will get records from his primary care physician if available as well as with his therapist who he had seen in the past.
+4.__Medication changes as follows: We will continue the Neurontin.
+It is unclear what response the patient had to Prozac as there was also a question of compliance; however, at this time due to his reports of mood lability and problems with anger and irritability, we will recommend adding a low dose of Abilify to target these symptoms and to stabilize mood.
+He will need to be closely monitored with regards to metabolic issues considering his diabetes.
+Abilify was chosen due to less of a risk of inducing metabolic changes compared to other atypical neuroleptics.
+The patient will continue Ambien p.r.n.__for insomnia.
+He may benefit from the addition of an antidepressant for treatment of his depression and anxiety, which I will defer to his outpatient provider.
+5.__Estimated length of stay: Two to three days.
+6.__The patient will be discharged when safe to self and others.
+
+
+</EndOfHeader>
+
+{SEC XCOPY}
+
+
+{END}
+
+
+[Person Name], DO
+
+
+GG/imn
+
+developmental disability: [Date] 12:31:45
+
+DT: [Date] 13:54:17
+
+

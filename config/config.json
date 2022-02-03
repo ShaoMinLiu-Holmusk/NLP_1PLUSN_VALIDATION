@@ -22,6 +22,12 @@
     "configVersions": {
         "json_label_parsing": "../config/modules/json_label_parsing/sampleConfig(dev).yaml",
         "create_dataset": "../config/modules/create_dataset/sampleConfig(dev).yaml",
-        "feature_competition": "../config/modules/feature_competition/sampleConfig(dev).yaml"
+        "feature_competition": "../config/modules/feature_competition/sampleConfig(dev).yaml",
+        "cache_features": "../config/modules/cache_features/sampleConfig(dev).yaml",
+        "get_txt_from_MSElabelled": "../config/modules/get_txt_from_MSElabelled/sampleConfig(dev).yaml",
+        "check_ProblemSampleCount": "../config/modules/check_ProblemSampleCount/sampleConfig(dev).yaml",
+        "holbert_sentence_test": "../config/modules/holbert_sentence_test/sampleConfig(dev).yaml",
+        "ensemble_features": "../config/modules/ensemble_features/sampleConfig(dev).yaml",
+        "ParaHolbert": "../config/modules/ParaHolbert/sampleConfig(dev).yaml"
     }
 }

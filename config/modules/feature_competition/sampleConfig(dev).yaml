@@ -6,10 +6,103 @@
 # a dictionary format, thus little changes are needed 
 # to be made to the actual code
 
-dataSource    : ../data/
+dataSource          : ../data/
+competitionSettings : {
+                        modelToNewFeature   : false, # save the output of the models as a new feature
+                        negation            : false,
+                        seed                : 2002,       # shared seed for any randomised process in the run
+                        testRatio           : 0.3,         # 70% train, 30% test
+                        textLocation        : ../data/intermediate/preprocessed/allBatches
+}
+
+# modelToNewFeature: if this is set to true in competitionSettings 
+# then the predict_prob from all methods, all problems and all features
+# will be combined to form a new feature, this creates the effect of 
+# ensemble methods
+
+models        : [{
+                    name              : myholbertPredict,
+                    participating     : true,
+                    subModule         : myholbertPredict,
+                    onlyworksWith     : [holbert], # this model will only run for name = `holbert` features
+                    subModuleConfig   : {
+                                          mselabelKeys: ../config/modules/feature_competition/myholbertPredict/myholbert_labelMapping.yaml
+
+                    }
+                  },{
+                    name              : KNNvanilla,
+                    participating     : true,
+                    subModule         : KNN,
+                    onlyworksWith     : [],
+                    subModuleConfig   : {
+                                          n_neighbors     : 3,
+                                          leaf_size       : 30
+                                        }
+                  },{
+                    name              : logRegVanilla,
+                    participating     : true,
+                    subModule         : logReg,
+                    onlyworksWith     : [],
+                    subModuleConfig   : {
+                                        }
+                  },{
+                    name              : lineRegVanilla,
+                    participating     : false, # not implemented
+                    subModule         : lineReg, # lineReg is essentially equivalent to logReg
+                    onlyworksWith     : [],
+                    subModuleConfig   : {
+                                        }
+                  },{
+                    name              : decisionTreeVanilla,
+                    participating     : true,
+                    subModule         : decisionTree,
+                    onlyworksWith     : [],
+                    subModuleConfig   : {
+                                        }
+                  }
+]
+
+problems      : [ {
+                    directory         : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels/depressedMood.csv,
+                    participating     : true,
+                  },{
+                    directory         : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels/cognitionIssue.csv,
+                    participating     : true,
+                  },{
+                    directory         : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels/hallucinationPresent.csv,
+                    participating     : true,
+                  },{
+                    directory         : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels/suicidalProne.csv,
+                    participating     : true,
+                  },{
+                    directory         : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels/anhedoniaPresent.csv,
+                    participating     : true,
+                  }
+]
+# overwrites the above arguments
+# accepts both format
+# problems      : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels
+
+features      : [
+                  {
+                    name              : holbert,
+                    participating     : true,
+                    featurePath       : ../data/intermediate/cache_features/2022-01-25_17-03-12/myholbert.csv
+                  },{
+                    name              : sbertOverall,
+                    participating     : true,
+                    featurePath       : ../data/intermediate/cache_features/2022-01-25_17-03-12/sbertOverall.csv
+                  },{
+                    name              : absappVanilla,
+                    participating     : true,
+                    featurePath       : ../config/modules/feature_competition/absapp/dfPerDoc.csv
+                  },{
+                    name              : ensembleGenesis,
+                    participating     : true,
+                    featurePath       : ../data/intermediate/feature_competition/2022-01-27_14-44-44_emselmbleFeatures/emsembleFeatures.csv
+                  }
+]
 
 output:
   location    : ../data/intermediate/feature_competition
-  name        : default # easier to just keep to deafult
-  overwrite   : false # if overwrite is false, will write with incremental name
-    
+  posfix      : 'ensembleParticipating' # give a tag to this run, appended to runID, default to empty

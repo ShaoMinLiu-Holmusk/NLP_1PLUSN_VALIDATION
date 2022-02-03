@@ -1,0 +1,7 @@
+{
+    "bertVersion": 2,
+    "tokenizer": "emilyalsentzer/Bio_ClinicalBERT",
+    "padding": "max_length",
+    "truncation": true,
+    "max_length": 64
+}

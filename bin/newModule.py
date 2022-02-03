@@ -21,13 +21,15 @@ if __name__ == '__main__':
         moduleFolder = Path(f'./modules/{moduleName}')
         
     moduleFolder.mkdir(parents=True)
-    (moduleFolder/ '__init__.py').mkdir()
+    with open(moduleFolder / '__init__.py', 'w') as mainFile:
+        mainFile.write("")
     
     mainTemplate = '''
 from logs import logDecorator as lD 
 from lib.Toolbox.readerWrap import readYASON
+from lib.Toolbox.writerWrap import writeYASON
 from pathlib import Path
-
+from datetime import datetime
 
 script = Path(__file__)
 moduleName = script.parent.stem
@@ -37,9 +39,18 @@ logBase = config['logging']['logBase'] + f'.modules.{moduleName}.{scriptName}'
 
 moduleConfig = config['configVersions'][moduleName]
 moduleConfig = readYASON(moduleConfig)
+runID = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+tag = moduleConfig['output']['posfix'] # each run has an timebased unique ID 
+runID = '_'.join((runID,tag)) if tag else runID # ID appened with tag(optional)
 
 @lD.log(logBase + '.main')
 def main(logger, resultsDict)->None:
+
+
+    outputLocation = Path(moduleConfig['output']['location']) / runID
+    outputLocation.mkdir(parents=True, exist_ok=True)
+    # keep a copy of the config file for regeneration
+    writeYASON(moduleConfig, outputLocation/Path(config['configVersions'][moduleName]).name)
     pass
 
 if __name__ == '__main__':
@@ -61,8 +72,7 @@ dataSource    : ../data/
 
 output:
   location    : ../data/intermediate/{moduleName}
-  name        : default # easier to just keep to deafult
-  overwrite   : false # if overwrite is false, will write with incremental name
+  posfix      : '' # give a tag to this run, appended to runID, default to empty
     '''
     configFolder = Path(f'../config/modules/{moduleName}')
     configFolder.mkdir(exist_ok=True, parents=True)

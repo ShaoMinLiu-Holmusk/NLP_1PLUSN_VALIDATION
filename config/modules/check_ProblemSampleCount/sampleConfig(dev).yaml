@@ -1,0 +1,14 @@
+
+# trying out using YAML as config file
+# YAML supports commenting unlike JSON
+# it is more user-friendly for documentation purposes
+# other than this, yamlFile and JSON can both be read as
+# a dictionary format, thus little changes are needed 
+# to be made to the actual code
+
+dataSource    : ../data/intermediate/create_dataset/2022-01-25_12-00-42_5initialLabels
+
+output:
+  location    : ../data/intermediate/check_ProblemSampleCount
+  posfix      : '' # give a tag to this run, appended to runID, default to empty
+    

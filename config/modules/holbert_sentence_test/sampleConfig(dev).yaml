@@ -1,0 +1,29 @@
+
+# trying out using YAML as config file
+# YAML supports commenting unlike JSON
+# it is more user-friendly for documentation purposes
+# other than this, yamlFile and JSON can both be read as
+# a dictionary format, thus little changes are needed 
+# to be made to the actual code
+
+# data frame telling the train/val use of each sentence
+# has an id column, 
+modelDataUsage    : ../models/MseAllTokens/20210804_030119/20210804_030119/model2/performance/predictions.pkl
+# master data telling the raw text of each sentence and the ground truth of each sentece
+# can be merged with modelDataUsage by the key `id`
+masterData        : ../data/intermediate/training/uiBatch1/mseLab_tensor_20210804_stratifier.p
+
+validationDataSet : ../data/intermediate/holbert_sentence_test/2022-01-26_15-54-45_dataViewing/validationSentences.p
+
+labelKeys         : ../models/MseAllTokens/20210804_030119/20210804_030119/model2/data_labelKeys_mseLab.json
+
+testProblemSet    : ../config/modules/feature_competition/myholbertPredict/myholbert_labelMapping.yaml
+
+holBertConfig     : ../config/holbert/ExampleDefaultConfig.json
+
+holbertFeatures   : ../data/intermediate/holbert_sentence_test/2022-01-26_16-48-27_featureGeneration/holBertFeaturesLive.csv
+
+output:
+  location    : ../data/intermediate/holbert_sentence_test
+  posfix      : 'addedROCauc' # give a tag to this run, appended to runID, default to empty
+    

@@ -25,7 +25,7 @@ convertTask     : [
                   ]
   },{
     customLabel : cognitionIssue,
-    positive    : 'general issue'                                       # 160 cases
+    positive    : 'Cognition - general issue'                                       # 160 cases
   },{
     customLabel : hallucinationPresent,
     positive    : [
@@ -39,11 +39,14 @@ convertTask     : [
                     'Hallucinations - tactile',                         # 89 cases
                     'Hallucinations - visual'                           # 386 cases
     ]
+  },{
+    customLabel : depressedMood,
+    positive    : 'Mood - depressed/sad'                                # 532 cases
   }
 ]
 
 
 output:
   location    : ../data/intermediate/create_dataset
-  name        : '' # give a tag to this run, appended to runID, default to empty
+  posfix        : '5initialLabels' # give a tag to this run, appended to runID, default to empty
   

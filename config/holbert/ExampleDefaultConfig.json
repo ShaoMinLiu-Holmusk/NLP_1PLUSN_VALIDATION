@@ -1,8 +1,8 @@
 {
     "SupportedModel": {
-        "SentenceClassifier": true,
+        "SentenceClassifier": false,
         "MseClassifier": true,
-        "StressorsClassifier": true,
+        "StressorsClassifier": false,
         "SideEffectClassifier": false
     },
     "BertPath": "../models/biobert_pretrain_output_disch_100000",
@@ -25,5 +25,5 @@
     "SideEffectClassifier": {
     },
     "Device": "auto",
-    "KeepTokens": true
+    "KeepTokens": false
 }

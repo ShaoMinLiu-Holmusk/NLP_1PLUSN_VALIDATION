@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0,'../src/')
+
 from logs import logDecorator as lD 
 from lib.Toolbox.readerWrap import readYASON
 from pathlib import Path
@@ -12,7 +15,7 @@ logBase = config['logging']['logBase'] + f'.modules.{moduleName}.{scriptName}'
 moduleConfig = config['configVersions'][moduleName]
 moduleConfig = readYASON(moduleConfig)
 runID = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-tag = moduleConfig['output']['name']
+tag = moduleConfig['output']['posfix']
 runID = '_'.join((runID,tag)) if tag else runID
 
 from modules.create_dataset.task_worker import executeTask
@@ -21,7 +24,9 @@ from tqdm import tqdm
 @lD.log(logBase + '.main')
 def main(logger, resultsDict)->None:
     
+    
     labels = readYASON(moduleConfig['dataSource'])
+    
     convertTask = moduleConfig['convertTask']
     outputLocation = Path(moduleConfig['output']['location']) / runID
     outputLocation.mkdir(parents=True, exist_ok=True)

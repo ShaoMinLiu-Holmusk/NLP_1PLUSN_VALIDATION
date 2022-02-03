@@ -18,8 +18,14 @@ def writeJSON(object, path, sort_keys=False):
     with open(path, 'w') as json_file:
         json.dump(object, json_file, indent=4, sort_keys=sort_keys)
         
-def writeYAML(object, path):
+def writeYAML(object, path, sort_keys=False):
     with open(path, 'w') as f:
-        yaml.safe_dump(object, f, sort_keys=False)
+        yaml.safe_dump(object, f, sort_keys=sort_keys)
+        
+def writeYASON(object, path, sort_keys=False):
+    if str(path).endswith('.json'):
+        writeJSON(object, path, sort_keys)
+    else:
+        writeYAML(object, path, sort_keys)
     
     

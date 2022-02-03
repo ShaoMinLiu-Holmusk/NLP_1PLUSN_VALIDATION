@@ -1,0 +1,35 @@
+# use for myholbertPredict
+# which of these flag is considered true corresponding 
+# to the outcome flagged out in create_dataset
+
+# to reconstruct this configuration, refer to the config 
+# for create_dataset, look at the labels needed to 
+# generate let say: suicidalProne.csv,
+# and then go to mseLabelKeys.json
+# list down the index that form the suicidalProne.csv
+
+anhedoniaPresent.csv : [
+  48 # "Mood_loss of interest/enjoyment",
+]
+
+cognitionIssue.csv : [
+  15 # "Cognition_general issue",
+]
+
+depressedMood.csv : [
+  49 # "Mood_depressed/sad",
+]
+
+hallucinationPresent.csv : [
+    30, # "Hallucinations_nonspecific issue",
+    31, # "Hallucinations_auditory",
+    32, # "Hallucinations_tactile",
+    33  # "Hallucinations_visual",
+]
+
+suicidalProne.csv : [
+    75, # "Suicidality_ideation present",
+    76, # "Suicidality_ideation present with means",
+    77, # "Suicidality_ideation present with plan",
+    78, # "Suicidality_attempt",
+]

@@ -1,0 +1,34 @@
+
+# trying out using YAML as config file
+# YAML supports commenting unlike JSON
+# it is more user-friendly for documentation purposes
+# other than this, yamlFile and JSON can both be read as
+# a dictionary format, thus little changes are needed 
+# to be made to the actual code
+
+dataSource    : ../data/intermediate/preprocessed/allBatchesParsed/2022-01-25_16-42-07
+
+features      : [
+                  {
+                    name              : sbertOverall,
+                    participating     : false,
+                    subModule         : modules.feature_competition.features.sbert.Feature,
+                    subModuleConfig   : {
+                                          aggregateMethod: overall
+                    }
+                  },{
+                    name              : myholbertLogits,
+                    participating     : true,
+                    subModule         : modules.feature_competition.features.myholbert.Feature,
+                    subModuleConfig   : {
+                      holbertConfig : ../config/holbert/ExampleDefaultConfig.json,
+                      logit         : True,
+                      cache         : ../data/intermediate/cache_features
+                    }
+                  }
+]
+
+output:
+  location    : ../data/intermediate/cache_features
+  posfix      : 'holbertLogits' # give a tag to this run, appended to runID, default to empty
+    

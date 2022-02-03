@@ -1,0 +1,40 @@
+{
+    "SupportedModel": {
+        "SentenceClassifier": false,
+        "MseClassifier": true,
+        "StressorsClassifier": false,
+        "SideEffectClassifier": false
+    },
+    "BertPath": "../models/biobert_pretrain_output_disch_100000",
+    "SentenceClassifier": {
+        "path": "../models/sentenceClassifier_V2/20210713_153829/20210713_202132/model0",
+        "filterSubLevel": true,
+        "topicLabMaptoClassifer": {
+            "MseClassifier":        0,
+            "StressorsClassifier":  1
+        }
+    },
+    "MseClassifier": {
+        "path": "../models/MseAllTokens/20210804_030119/20210804_030119/model2",
+        "filterSubLevel": true
+    },
+    "StressorsClassifier": {
+        "path": "../models/StressorsAllTokens/20210909_161211/20210911_171841/model0",
+        "filterSubLevel": true
+    },
+    "SideEffectClassifier": {
+    },
+    "Device": "auto",
+    "KeepTokens": false,
+    "preprocessing": {
+        "tempCache": "../src/lib/holbert/config/preprocessing/textTemp",
+        "abbreviations": "../src/lib/holbert/config/preprocessing/abbreviations.csv",
+        "hunspell_dic": "../src/lib/holbert/config/preprocessing/en_US.dic",
+        "hunspell_aff": "../src/lib/holbert/config/preprocessing/en_US.aff",
+        "medical_terms_text": "../src/lib/holbert/config/preprocessing/add_to_dict.txt",
+        "icd": "../src/lib/holbert/config/preprocessing/Unique_concept_name_Condition_ICD.csv",
+        "drug": "../src/lib/holbert/config/preprocessing/Unique_concept_name_Drug_clean.csv",
+        "classifier": "../src/lib/holbert/config/preprocessing/rf_model.pkl",
+        "clf_thresh": 0.6
+    }
+}
